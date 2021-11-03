@@ -1,0 +1,1440 @@
+# <#>HTML<> SpeedSheet
+<b>What you need, faster.<>
+
+
+# Summary
+
+
+### Case
+
+Html - Not case sensitive
+xHtml - case sensitive
+
+Tags should be in lower case (W3C standards).
+
+
+
+### Comments
+
+<cb><#>\<!-- <i>comment<> --><><>
+
+
+
+### Parameters
+
+<cb>http//<v>url.com<>/<v>page.html<>?<v>pram1<>=<v>value<>&<v>param2<>=<v>value2<><>
+
+<cb><v>...<> ? <v>param<> = <v>value<> & <v>param<> = <v>value<> & <v>...<><>
+
+
+
+### Elements
+
+Reference by id with "#".
+Element ids must be unique.
+
+
+
+### Document Type
+
+<cb>\<!DOCTYPE html><>
+
+Identifies the document as an HTML 5 doc.
+
+
+
+### CSS - In File
+
+<cb>\<style>
+	<v>...<>
+\</style><>
+@
+@ Add, Include, Cascading Style Sheet
+
+
+
+### CSS - In Line
+
+<cb>\<<v>element<> style="<v>...<>"><v>...<><>
+
+
+
+### CSS - External File
+
+<cb>\<link type="text/css" media="all" rel="stylesheet" href="<v>css_file<>"><>
+@
+@ Add, Include, Cascading Style Sheet
+
+
+
+### Java Script - Inline
+
+<cb>\<script>
+	<v>javascript...<>
+\</script><>
+@
+@ Add, Include, JS
+
+
+
+### Java Script - File
+
+<cb>\<script type="text/javascript" src="<v>javascript_file<>">\</script><>
+@
+@ Add, Include, JS
+
+
+
+# Templates
+@
+@ Samples
+
+
+## Template - Html Page
+
+<cb>\<!DOCTYPE html>
+\<html lang="en">
+\<head>
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	\<title><v>Page Title<>\</title>
+\</head>
+\<body>
+
+	\<h1><v>Heading<>\</h1>
+	\<p><v>Content<>\</p>
+
+\</body>
+\</html><>
+
+
+## Template - Html Page + CSS, JavaScript
+
+<cb>\<!DOCTYPE html>
+\<html lang="en">
+\<head>
+	\<meta charset="utf-8" />
+	\<title><v>Page Title<>\</title>
+
+	\<link rel="stylesheet" href="<v>css_file.css<>">
+	\<script src="<v>js_file.js<>">\</script>
+
+	\<style>
+		<#>/* CSS Here: */<>
+	\</style>
+
+	\<script>
+		<#>// Javascript Here:<>
+	\</script>
+
+\</head>
+\<body>
+
+	\<h1><v>Heading<>\</h1>
+	\<p><v>Content<>\</p>
+
+\</body>
+\</html><>
+@
+@ JS, Cascading Style Sheet, witth
+
+
+
+# Escape Characters
+
+Space	<c>&nbsp;<>			(<b>N<>on <b>B<>reaking <b>Sp<>ace)	<#>#1<>
+Tab		<c>&emsp;<>			(<b>Em<> <b>Sp<>ace) (Full Tab)
+		<c>&ensp;<>			(<b>En<> <b>Sp<>ace) (Half Tab)
+
+
+
+&		<c>&amp;<>			(<b>Amp<>ersand)
+\<		<c>&lt;<>			(<b>L<>ess <b>T<>han)
+>		<c>&gt;<>			(<b>G<>reater <b>T<>han)
+
+:		<c>&#58;<>
+/		<c>&#47;<>
+\@		<c>&#64;<>
+©		<c>&#0169;<>
+®		<c>&#0174;<>
+™		<c>&#0153;<>
+
+
+
+\#1  <s>-<>  Use to keep words/elements together that would ordinarily be separated.
+
+See:
+<l>https://www.w3.org/MarkUp/html3/specialchars.html<>
+<l>https://www.w3.org/TR/html4/sgml/entities.html<>
+
+
+Example:
+
+Display on same line:
+
+<cb><v>this<>&nbsp;<v>and<>&nbsp;<v>this<>&nbsp;<v>will<>&nbsp;<v>stay<>&nbsp;<v>on<>&nbsp;<v>same<>&nbsp;<v>line<><>
+@
+@ &nbsp; nbsp;, &, \<, >, :, /, @, ©, Copyright, ®, Registered Trademark
+
+
+# Primary Page Elements <!>!!!!<>
+
+<!>Consider sub-sections for these!<>
+
+<c>doctype<>		Declares html standard used.
+<c>html<>		Root element
+<c>head<>		Document Metadata
+<c>body<>		Document Data
+@
+@ HTML, doctype, html, head, body
+
+
+
+# Anchor, Link
+@
+@ Anchors, Links, \<a>, href, url
+
+
+### Link
+
+<cb>\<a href="<v>url<>"><v>Description<>\</a><>
+
+
+
+### Link - To External Page
+
+<cb>\<a href="https://<v>google.com<>"><v>Description<>\</a><>
+
+Note: The path can be absolute or relative.
+
+
+
+### Link - To External Page With Deep Link
+
+<cb>\<a href="https://<v>url.com<>#<v>target_id<>"><v>description<>\</a><>
+
+Loads page and jumps to page target.
+
+
+
+### Link - To Element On Page
+
+<!>What does <c>title=""<> do?<>
+
+<cb>\<a name="<v>element_id<>" title="<v>Target Title<>"><v>...<>\</a><>
+
+
+
+### Link - To Email Address
+
+<cb>\<a href="mailto:<v>name<>@<v>url<>"><v>Description<>\</a><>
+
+Example:
+
+<cb>\<a href="mailto:<v>bender<>@<v>ilovebender.com<>"><l "mailto:bender@ilovebender.com"><v>Bender<><>\</a><>
+@
+@ mail, mailto
+
+
+
+
+### Link - To Phone Number
+
+<cb>\<a href="tel:<v>phone_number<>"><v>Description<>\</a><>
+
+Example:
+
+<cb>\<a href="tel:<v>+1-555-555-1234<>"><l "tel:+1-555-555-1234"><v>+1 555-555-1234<><>\</a><>
+@
+@ telephone cell mobile, tel
+
+
+
+
+### Anchor - Page Element
+
+<!>Fix This. Need to prototype and use <b>id<> tag if possible<>
+
+<cb>\<a name="<v>target_Name<>" title="<v>Target Title<>"><v>...<>\</a><>
+
+
+
+# Block Elements
+@
+@ block-only
+
+
+## Summary
+
+<!>Confirm this is the full list.<>
+
+<c>\<blockquote><>		Block Quote
+<c>\<div><>			Block Container
+<c>\<dl><>			Description List
+<c>\<form><>			Form
+<c>\<h1><>, <c>\<h2><>, <c>\<h3><>, <c>\<h4><>, <c>\<h5><>, <c>\<h6><> 	Header Tags
+<c>\<hr><>			Horizontal Rule
+<c>\<ol><>			Ordered List
+<c>\<p><>				Paragraph
+<c>\<table><>			Table
+<c>\<ul><>			Unordered List
+<c>\<li><> 			List Item
+
+
+
+## Details
+
+
+### Block Element - Block Quote (blockquote)
+
+<cb>\<blockquote><v>...<>\</blockquote><>
+@
+@ blockquote
+
+
+
+### Block Element - Div (div)
+
+<cb>\<div><v>...<>\</div><>
+
+A non semantic structure.
+Should contain internal elements
+Should never contain bare simple content.
+@
+@ non-semantic, div
+
+
+
+### Block - Form (form)
+
+<cb>\<form><v>...<>\</form><>
+@
+@ form
+
+
+
+### Block - Heading Tags (h1 ... h6)
+
+<cb>\<h1><v>...<>\</h1><>
+
+<cb>\<h2><v>...<>\</h2><>
+
+<cb>\<h3><v>...<>\</h3><>
+
+<cb>\<h4><v>...<>\</h4><>
+
+<cb>\<h5><v>...<>\</h5><>
+
+<cb>\<h6><v>...<>\</h6><>
+@
+@ h1, h2, h3, h4, h5, h6
+@ headings, captions, headers
+
+
+
+### Block - Horizontal Rule (hr)
+
+<cb>\<hr><v>...<>\</hr><>
+@
+@ hr
+
+
+
+### Block - List - Description List (dl)
+
+<cb>\<dl><v>...<>\</dl><>
+
+<cb>\<dl>
+	\<dt><v>Item 1<>\</dt>
+	\<dd><v>Description 1<>\</dd>
+
+	\<dt><v>Item 2<>\</dt>
+	\<dd><v>Description 2<>\</dd>
+
+	\<dt><v>Item 3<>\</dt>
+	\<dd><v>Description 3<>\</dd>
+\</dl><>
+@
+@ Descriptive
+
+
+
+### Block - List - Ordered List (ol)
+
+<cb>\<ol><v>...<>\</ol><>
+
+<cb>\<ol>
+	\<li><v>Item 1<>\</li>
+	\<li><v>Item 2<>\</li>
+	\<li><v>Item 3<>\</li>
+\</ol><>
+
+
+Numbered list by default.
+
+
+HTML Style:
+
+<cb>\<ol type="<v>type<>"><v>...<>\</ol><>
+
+<c><v>type<><>  <s>-<>  <c>1<>  <s>|<>  <c>a<>  <s>|<>  <c>A<>  <s>|<>  <c>i<>  <s>|<>  <c>I<>
+
+	<c>1<>			1, 2, 3
+	<c>a<>			a, b, c
+	<c>A<>			A, B, C
+	<c>i<>			i, ii, iii
+	<c>I<>			I, II, III
+
+
+CSS Style:
+
+<cb>list-style-type: <v>type<>;<>
+
+<c><v>type<><>  <s>-<>	<c>decimal<>  <s>|<>  <c>decimal-leading-zero<>  <s>|<>
+		<c>lower-alpha<>  <s>|<>  <c>upper-alpha<>  <s>|<>  <c>lower-greek<>  <s>|<>
+		<c>lower-roman<>  <s>|<>  <c>upper-roman<>  <s>|<>  <c>none<>
+
+	<c>decimal<>					1, 2, 3
+	<c>decimal-leading-zero<>		, 1, 2
+	<c>lower-alpha<>				a, b, c
+	<c>upper-alpha<>				A, B, C
+	<c>lower-greek<>				⍺, β, δ
+	<c>lower-roman<>				i, ii, iii
+	<c>upper-roman<>				I, II, III
+	<c>none<>				
+
+Note: No <c>upper-greek<>
+Note: <c><v>...-alpha<><> and <c><v>...-latin<><> are the same
+@
+@ ol, li, numbered
+
+
+
+### Block - List - Unordered List (ul)
+
+<cb>\<ul><v>...<>\</ul><>
+
+<cb>\<ul>
+	\<li><v>Item 1<>\</li>
+	\<li><v>Item 2<>\</li>
+	\<li><v>Item 3<>\</li>
+\</ul><>
+
+
+Bulleted list by default.
+
+
+CSS Style:
+
+<cb>list-style-type: <v>type<>;<>
+
+<c><v>type<><>  <s>-<>  <c>disc<>  <s>|<>  <c>circle<>  <s>|<>  <c>square<>  <s>|<>  <c>none<>
+
+	<c>disc<>		Bullet
+	<c>circle<>		Circle
+	<c>square<>		Square
+	<c>none<>		No List Marker
+@
+@ ul, li, bulleted
+
+
+
+### Block - Paragraph (p)
+
+<cb>\<p><v>...<>\</p><>
+
+Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
+
+
+
+### Block - Table (table)
+
+<cb>\<table><v>...<>\</table><>
+
+<cb>\<table>
+	\<tr>
+		\<td>
+			<v>...<>
+		\</td>
+	\</tr>
+\</table><>
+
+
+
+### Block - Table With Headings
+
+<cb>\<table>
+	\<tr>
+		\<th>
+			<v>Heading<>
+		\</th>
+	\</tr>
+	\<tr>
+		\<td>
+			<v>...<>
+		\</td>
+	\</tr>
+\</table><>
+
+
+
+# Non-Semantic Text Elements
+
+
+## Summary
+
+Note: These are generally not recommended. Use semantic elements instead.
+
+Bold				<c>\<b><>
+Strikethrough		<c>\<s><>
+					<c>\<strike><>	(Deprecated)
+Underline			<c>\<u><>
+
+
+
+# Semantic Text Elements
+
+
+## Summary
+
+Abbreviation			<c>\<abbr><>
+Acronym				<c>\<acronym><>
+Cite					<c>\<cite><>
+Code				<c>\<code><>
+Code Sample			<c>\<samp><>
+Code Variables		<c>\<var><>
+Delete				<c>\<del><>
+Emphasis			<c>\<em><>
+Insert				<c>\<ins><>
+Keyboard Input		<c>\<kbd><>
+Mark				<c>\<mark><>
+Misspelled Word		<c>\<v><>
+Quotes - Block		<c>\<blockquote><>
+Quotes - Inline		<c>\<q><>
+Small				<c>\<small><>
+Strong				<c>\<strong><>
+Subscript			<c>\<sub><>
+Superscript			<c>\<sup><>
+
+
+
+## Details
+
+
+
+### Abbreviation (abbr)
+
+<cb>\<abbr><v>...<>\</abbr><>
+
+
+Example:
+
+<cb>\<abbr title="<v>Facsimile<>"><v>Fax<>\</abbr><>
+@
+@ abbr
+
+
+
+### Acronym (acronym)
+
+<cb>\<acronym><v>...<>\</acronym><>
+
+
+Example:
+
+<cb>\<acronym title="<v>Hypertext Markup Language<>"><v>HTML<>\</acronym><>
+
+
+
+### Cite (cite)
+
+<cb>\<cite><v>...<>\</cite><>
+
+Use to cite work from someone else.
+
+
+
+### Code (code)
+
+<cb>\<code><v>...<>\</code><>
+
+Use to show a snippet of programming code.
+
+
+Example:
+
+<cb>The <c>\<code>print()\</code><> statement prints a message to the screen.<>
+
+
+
+### Code - Sample Output (samp)
+
+<cb>\<samp><v>...<>\</samp><>
+
+Use to show sample output from a piece of code.
+
+
+
+### Code Variables (var)
+
+<cb>\<var><v>...<>\</var><>
+
+
+
+### Delete (del)
+
+<cb>\<del><v>...<>\</del><>
+
+Use to show a section is deleted.
+Displays as a strikethrough.
+@
+@ \<del>, \<s>, \<strike>, strikethrough
+
+
+
+### Emphasis (em)
+
+<cb>\<em><v>...<>\</em><>
+
+Typically formatted as italics.
+Consider CSS instead.
+
+
+
+### Insert (ins)
+
+<cb>\<ins><v>...<>\</ins><>
+
+Use to show a section has been inserted.
+Displays as an underline.
+@
+@ \<ins>, \<s>, \<strike>, underline
+
+
+
+### Keyboard Input (kbd)
+
+<cb>\<kbd><v>...<>\</kbd><>
+
+
+
+### Mark (mark)
+
+<cb>\<mark><v>...<>\</mark><>
+
+Indicates some text that needs to be highlighted.
+Typically highlighted with a yellow background.
+
+
+
+### Misspelled Word (u)
+
+<cb>\<v><v>...<>\</u><>
+
+Indicates a misspelled word on the document.
+
+
+
+### Quotes - Block (blockquote)
+
+<cb>\<blockquote><v>...<>\</blockquote><>
+
+Typically indented.
+
+Example:
+
+<cb>\<blockquote cite="<v>http://url<>"><v>...<>\</blockquote><>
+
+
+
+### Quotes - Inline (q)
+
+<cb>\<q><v>...<>\</q><>
+
+
+
+### Small (small)
+
+<cb>\<small><v>...<>\</small><>
+
+Makes text small (about ½ typical size).
+Use for copyright or fine print.
+
+
+
+### Strong (strong)
+
+<cb>\<strong><v>...<>\</strong><>
+
+Typically formatted as Bold.
+Consider CSS instead.
+
+
+
+### Subscript (sub)
+
+<cb>\<sub><v>...<>\</sub><>
+
+
+
+### Superscript (sup)
+
+<cb>\<sup><v>...<>\</sup><>
+
+
+
+# Layout Elements
+
+
+
+## Semantic Layout Elements - Summary <!>!!!!<>
+
+<!>Consider sub-sections for these!<>
+
+<c>\<header><>
+<c>\<nav><>
+<c>\<main><>
+
+<c>\<summary><>
+<c>\<article><>
+<c>\<section><>
+<c>\<details><>
+<c>\<aside><>
+
+<c>\<footer><>
+
+
+
+
+## Layout Elements - Details
+
+
+
+# Button
+
+
+### Button - Simple
+
+<cb>\<button><v>caption<>\</button><>
+
+
+
+### Button - Call JavaScript Function
+
+<cb>\<button onclick="<v>function1<>()"><v>caption<>\</button><>
+
+
+
+### Button - Open Link
+
+<cb>\<input type="button" onclick="location.href='<v>https://speedsheet.io<>';" value="<v>Go to SpeedSheet<>" /><>
+
+
+
+# Form Element
+
+
+## Form - Basics
+
+<cb>\<form><v>...<>\</form><>
+
+<cb>\<form action="<v>url<>" method="<v>method<>"><v>...<>\</form><>
+
+<c>action<>  <s>-<>  The url to submit the data to.
+
+<c>method<>  <s>-<>  TThe HTTP command to use to submit the data.
+
+<v>method<>  =  "get"  <s>|<>  "post"
+
+
+
+### Form - Call JavaScript Function
+
+<cb>\<form action="javascript:<v>function1()<>;"><v>...<></form><>
+@
+@ action, js, javascript
+
+
+
+### Form - Send To Mail
+
+<cb>\<form action="mailto:<v>email<>@<v>address.com<>" method="get"><v>...<></form><>
+@
+@ action, mailto
+
+
+
+### Form - Fieldset
+
+<cb>\<form>
+	\<fieldset>
+		\<dl>
+			\<dt>\<label for="<v>fieldName<>"><v>Label<>\</label>\</dt>
+			\<dd>\<input type="<v>type<>" name="<v>fieldName<>" />\</dd>
+		\</dl>
+	\<fieldset/>
+\<form/><>
+@
+@ Field Set
+
+
+
+### Form - Fieldset With legend
+
+<cb>\<form>
+	\<fieldset>
+
+		\<legend><v>Legend Name<>\</legend>
+
+		\<label for="<v>fieldName1<>"><v>Label 1<>\</label>
+		\<input type="type" name="<v>fieldName1<>" />
+
+		\<label for="<v>fieldName2<>"><v>Label 2<>\</label>
+		\<input type="type" name="<v>fieldName2<>" />
+		<v>...<>
+	\<fieldset/>
+\<form/><>
+
+
+Legend - Label the group of fields.
+@
+@ Field Set
+
+			
+
+### Form - Input Button
+
+<cb>\<input type="submit" value="<v>Submit Label<>" onclick="<v>javaScriptFunction1<>()" /><>
+
+Using Button Element (action = submit):
+
+<cb>\<button type="button"><v>label<>\</button><>
+
+Use this to call javascript.
+
+Use <c>type="button"<> inside a form only.
+Sets button to submit action.
+If missing, the button does nothing.
+
+
+
+### Form - Input Checkbox
+
+<cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" /><v>Label 1\<br/><><>
+
+<cb>\<input type="radio" name="<v>field_2<>" checked/><v>Label 2<><>
+
+
+
+### Form - Input Color Picker
+
+<cb>\<input type="color" /><>
+
+
+Not supported on all browsers.
+
+
+
+### Form - Input Date - Month
+
+<cb>\<input type="month" /><>
+
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+
+
+
+### Form - Input Date - Week
+
+<cb>\<input type="week" /><>
+
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+
+
+
+### Form - Input Drop Down List
+
+<cb>\<select name="<v>fieldName<>">
+	\<option value="<v>Value 1<>"><v>Label 1<>\</option>
+	\<option value="<v>Value 2<>"><v>Label 2<>\</option>
+	<v>...<>
+\</select><>
+
+Multi-Select:
+
+<cb>\<select name="<v>fieldName<>" multiple>
+	<v>...<>
+\</select><>
+
+Selected Item:
+
+<cb>\<select name="<v>fieldName<>">
+	\<option value="<v>Value 3<>" selected="selected"><v>Label 3<></option>
+	<v>...<>
+\</select><>
+
+
+<c>selected="selected"<>  <s>-<>  Selects the item to be displayed in the drop down list.
+@
+@ multi-select, multiple values
+
+
+
+### Form - Input Drop Down - Groups
+
+<cb>\<select name="<v>field_name<>" [multiple] >
+	\<optgroup label="<v>Section 1 Heading<>">
+		\<option value="<v>value_1<>"><v>Label 1<>\</option>
+		<v>...<>
+	\</optgroup>
+	\<optgroup label="<v>Section 2 Heading<>">
+		\<option value="<v>value_2<>"><v>Label 2<>\</option>
+		<v>...<>
+	\</optgroup>
+	<v>...<>
+\</select><>
+@
+@ multi-select list
+
+
+
+### Form - Input Field
+
+<cb>\<input /><>
+
+<cb>\<input
+		name="<v>fieldName<>"
+		value="<v>actual value<>"
+		size="<v>displayWidth<>"
+		maxLength="<v>maxLength<>"
+		type="<v>type<>" /><>
+
+
+<c><v>type<><>  =  <c>text<>  <s>|<>  <c>password<>  <s>|<>  <c>checkbox<>  <s>|<>  <c>radio<>  <s>|<>  <c>submit<>  <s>|<>  <c>hidden<>  <s>|<>  <c>button<>  <s>|<>  <c>image<>  <s>|<>  <c>reset<>
+
+
+
+### Form - Input File
+
+<cb>\<input type="file" name="<v>fieldName<>" /><>
+
+Requires:
+
+<cb>\<form <v>...<> enctype="multipart/form-data" ><v>...<><>
+
+
+Creates: Multipart Form Data request.
+
+
+
+### Form - Input File - Restrict By Type Only
+
+Audio only:
+
+<cb>\<form <v>...<> accept="audio/*" ><v>...<><>
+
+Images only:
+
+<cb>\<form <v>...<> accept="image/*" ><v>...<><>
+
+Videos only:
+
+<cb>\<form <v>...<> accept="video/*" ><v>...<><>
+
+
+Creates: Multipart Form Data request.
+@
+@ restricted, filter
+
+
+
+### Form - Input Hidden
+
+<cb>\<input type="hidden" name="<v>fieldName<>" value="<v>value<>" /><>
+
+
+
+### Form - Input List
+
+<cb>\<select <v>...<> size="<v>rowCount<>">
+	<v>...<><>
+
+
+
+### Form - Input List - Multi-Select
+
+<cb>\<select name="<v>fieldName<>" multiple>
+	<v>...<><>
+@
+@ input - drop down list
+@ input drop down groups
+
+
+
+### Form - Input List - Data List
+
+<cb>\<input list="<v>list_1_name<>"/><>
+	
+<cb>\<datalist id="<v>list_1_name<>">
+	\<option value="<v>Value 1<>">
+	\<option value="<v>Value 2<>">
+	...
+\</datalist><>
+
+<!>Need both? Get example.<>
+
+
+
+### Form - Input Password
+
+<cb>\<input type="text" name="<v>fieldName<>" value="<v>default value<>" /><>
+
+
+
+### Form - Input Radio Button
+
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"/><v>Field Label 1<>\<br/>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"/><v>Field Label 2<><>
+
+Checked:
+
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>" checked /><v>Field Label 1<>\<br/><>
+
+
+<c>checked<>  <s>-<>  Marks which radio button is currently selected.
+
+
+<!>Field labels after input field?<>
+
+
+
+### Form - Input Range Selector
+
+<cb>\<input type="<v>range<>" min="<v>min_value<>" max="<v>max_value<>" value="<v>some_value<>" /><>
+
+Step Value:
+
+<cb>\<input type="<v>range<>" <v>...<> step="<v>step_value<>" <v>...<> /><>
+
+
+Step Value - Sets the size between one value and the next.
+
+
+
+### Form - Input Submit
+
+<cb>\<input type="submit" value="<v>Submit Label<>" /><>
+
+
+
+### Form - Input Text
+
+<cb>\<input type="text" name="<v>field1<>" placeholder="<v>placeholder text<>" value="<v>default value<>" size="<v>column_count<>" /><>
+
+Max Length:
+
+<cb>\<input type="text" maxlength="<v>max_length_in_characters<>" <v>...<> ><>
+
+Pattern Filter:
+
+<cb>\<input type="text" pattern="<v>regex_pattern<>" <v>...<> ><>
+
+
+<c>placeholder<> is a HTML5 feature and places text in the box when there is no data there.
+
+
+
+### Form - Input Text - Search
+
+<cb>\<input type="Search" /><>
+
+Gives 'x' to clear fields on mobile devices, some browsers.
+
+
+
+### Form - Input Text Multiline
+
+<cb>\<textarea rows=rowCount cols=colCount name="field1">\</textarea><>
+
+Disable Word Wrap:
+
+<cb>\textarea wrap="soft" <v>...<>><>
+
+
+
+### Form - Input Type - Email
+
+<cb>\<input type="email" /><>
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+@
+@ mail
+
+
+
+### Form - Input Type - Number
+
+<cb>\<input type="number" /><>
+
+Gives number increment decrement control.
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+
+
+
+### Form - Input Type - Phone
+
+<cb>\<input type="tel" /><>
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+@
+@ telephone, cell, mobile
+
+
+
+### Form - Input Type - Url
+
+<cb>\<input type="url" /><>
+
+Mobile devices may display special keyboard.
+Not supported on all browsers.
+@
+@ link
+
+
+
+## Input Validations
+
+Sets a value in the given validation variable(?)
+@
+@ validate constraint
+
+
+
+### Validation - Is Valid
+
+Check:
+
+<cb>= ValidityState.valid<>
+
+Happens when all validation checks pass.
+@
+@ ValidityState.valid, .valid
+
+
+
+### Validation - Pattern Mismatch
+
+Set:
+
+<cb>\<input ... pattern="<v>input_regex_pattern<>" <v>...<> ><>
+
+Check:
+
+<cb>= ValidityState.patternMismatch<>
+
+Returns true if text is mismatched against regex pattern.
+@
+@ ValidityState.patternMismatch, .patternMismatch
+
+
+
+### Validation - Range Overflow
+
+Set:
+
+<cb>\<input type="range" max="<v>max_value<>" <v>...<> /><>
+
+Check:
+
+<cb>= ValidityState.rangeOverflow<>
+
+Returns true when input value is greater than <c><v>max_value<><>.
+@
+@ ValidityState.rangeOverflow, .rangeOverflow
+
+
+
+### Validation - Range Step Mismatch
+
+Set:
+
+<cb>\<input type="range" min="<v>min_value<>" step="<v>step_value<>" <v>...<> /><>
+
+Check:
+
+<cb>= ValidityState.stepMismatch<>
+
+Happens when the actual value is outside what is possible with the min and step values.
+@
+@ ValidityState.stepMismatch, .stepMismatch
+
+
+
+### Validation - Range Underflow
+
+Set:
+
+<cb>\<input type="range" min="<v>min_value<>" <v>...<> /><>
+
+Check:
+
+<cb>= ValidityState.rangeUnderflow<>
+
+Returns true when input value is less than <c><v>min_value<><>.
+
+
+
+### Validation - Required
+
+Set:
+
+<cb>\<input <v>...<> required><>
+
+Check:
+
+<cb>= ValidityState.valueMissing<>
+@
+@ enforce, mandatory
+
+
+
+### Validation - Type Mismatch
+
+For:
+
+<cb>type="email"
+type="url"
+
+<#>// etc.<><>
+
+Check:
+
+<cb>= ValidityState.typeMismatch<>
+@
+@ ValidityState.typeMismatch, .typeMismatch
+
+
+
+# Images
+
+
+### Image - Basics
+
+<cb>\<img src="<v>image_path<>"><>
+
+<cb>\<img src="<v>image_path<>" alt="<v>description<>"><>
+
+
+<c>\</img><> is not required.
+@
+@ img src
+
+
+
+# Viewport
+
+
+### Viewport - Basics
+
+<cb>\<meta name="viewport"
+      content="
+          height = [pixel_value | "device-height"] ,
+          width = [pixel_value | "device-width"] ,
+          initial-scale = <v>float_value<> ,
+          minimum-scale = <v>float_value<> ,
+          maximum-scale = <v>float_value<> ,
+          user-scalable = ["yes" | "no"]
+          " /><>
+
+
+### Viewport - Standard
+
+<cb>\<meta name="viewport" content="width=device-width, initial-scale=1.0"><>
+
+
+# How To
+
+
+### Keep Elements On Same Line
+
+Join with <c>&nbsp;<>.
+Keeps connected words together on the same line where they would separate in other circumstances.
+
+
+Example:
+
+<cb><v>this<>&nbsp;<v>and<>&nbsp;<v>this<>&nbsp;<v>will<>&nbsp;<v>stay<>&nbsp;<v>on<>&nbsp;<v>the<>&nbsp;<v>same<>&nbsp;<v>line<><>
+@
+@ &nbsp;
+
+
+### Page - Redirect
+
+<cb>\<meta http-equiv="refresh" content="<v>time_in_seconds<>; url=<v>new_page_url<>" /><>
+
+
+Redirects to <c><v>new_page_url<><> after <c><v>time_in_seconds<><>.
+Watch out for the funky syntax in <c>content="<v>...<>"<>.
+
+
+Example:
+
+<cb>\<meta http-equiv="refresh" content="3; url=index.html" /><>
+
+
+# Glossary
+
+
+## Acronyms
+
+
+### CDN
+Content Delivery Network
+
+
+### CSS
+Cascading Style Sheet
+
+
+### dd
+Description
+
+(From Description List)
+
+
+### dl
+Description List
+
+
+### DOM
+Document Object Model
+
+
+### dt
+Description Tag
+
+(From Description List)
+
+
+### HTML
+Hyper Text Markup Language
+
+
+### JS
+JavaScript
+
+
+### li
+List Item
+
+(Ordered or Unordered List)
+
+
+### nbsp
+Non Breaking Space
+@
+@ &nbsp;, nbsp; space
+
+
+### ol
+Ordered List
+
+
+### ul
+Unordered List
+
+
+### W3C
+World Wide Web Consortium
+
+
+## Terms
+
+
+### Block Element
+A page element that forces a new line to occur.
+
+vs: Inline element
+
+
+### Element
+Everything from the opening tag to the closing tag.
+
+
+### Inline Element
+A page element that does not force a new line.
+
+vs: Block Element
+
+
+### Shadow DOM
+Encapsulates custom elements in the DOM.
+
+Parts: Shadow Root, Shadow Host.
+See Also: Web Components
+
+
+### Tag
+The text between <c>\<<> and <c>><>.
+
+It defines an element on the page.
+
+
+### Target
+<!>Define the target as the thing that get the link request (self, new page, etc)<>
+
+
+### Templates
+Creates a pattern of HTML that can be filled with data before displaying it.
+
+
+### Web Components
+A way to define and use reusable html widgets.
+
+Parts (4): Templates, Shadow DOM, CustomElements, Packaging.
+
+
+### Web Socket
+A 2 way communication method between the browser and the server.
+
+
+### XHTML
+A more strict version of HTML. Caused way more problems than it solved.
+
+
+
+# HTML History
+
+
+## Summary
+
+HTML Created
+W3C Created
+HTML 4 Released
+XHTML
+HTML 5
+HTML Living Standard
+
+<!>Get Some Detail Here!<>
+
+
+## Details
+
+
+### HTML 4
+The first version to support animations and interactivity. This changed everything.
+
+
+### HTML 5
+New Elements + New JavaScript APIs. Now considered a living standard.
+
+Provides containers that give information about the content inside.
+
+e.g. header, main, footer elements.
+

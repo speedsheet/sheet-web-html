@@ -1222,6 +1222,8 @@ Check:
 
 
 # Images
+@
+@ \<img>
 
 
 ### Image - Basics
@@ -1259,6 +1261,46 @@ Check:
 
 
 # How To
+
+
+### Embed Video
+
+<cb>\<video>
+	\<source src="<v>video.mp4<>" type="<v>video/mp4<>">
+\</video><>
+
+Full Form:
+
+<cb>\<video width="<v>width<>" height="<v>height<>" controls autoplay>
+
+	\<source src="<v>video.mp4<>" type="<v>video/mp4<>">
+
+	<v>Video not supported message here.<>
+
+\</video><>
+
+Embed videos into a web page.
+@
+@ \<video>, \<source> src="", control, autoplay
+
+
+
+### Embed Youtube Video
+
+<cb>\<iframe src="https://www.youtube.com/embed/<v>video_id<>" width="<v>width<>" height="<v>height<>">\</iframe><>
+
+
+Embed videos using an iframe.
+
+
+Example:
+
+<cb>\<iframe src="https://www.youtube.com/embed/fKFDRRj9SYA" width="640" height="360">
+<h>iframe width=640 height=360 src=https://www.youtube.com/embed/fKFDRRj9SYA</h><h>/iframe</h>
+\</iframe><>
+@
+@ \<iframe>, src, width, height
+
 
 
 ### Keep Elements On Same Line

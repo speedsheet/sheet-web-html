@@ -284,7 +284,7 @@ Example:
 ## Details
 
 
-### Block Element - Block Quote (blockquote)
+### Block Element - Block Quote / \<blockquote>
 
 <cb>\<blockquote><v>...<>\</blockquote><>
 @
@@ -292,7 +292,7 @@ Example:
 
 
 
-### Block Element - Div (div)
+### Block Element - Div / \<div>
 
 <cb>\<div><v>...<>\</div><>
 
@@ -304,7 +304,7 @@ Should never contain bare simple content.
 
 
 
-### Block - Form (form)
+### Block - Form / \<form>
 
 <cb>\<form><v>...<>\</form><>
 @
@@ -312,7 +312,7 @@ Should never contain bare simple content.
 
 
 
-### Block - Heading Tags (h1 ... h6)
+### Block - Heading Tags / \<h1> ... \<h6>
 
 <cb>\<h1><v>...<>\</h1><>
 
@@ -331,15 +331,20 @@ Should never contain bare simple content.
 
 
 
-### Block - Horizontal Rule (hr)
+### Block - Horizontal Rule / \<hr>
 
-<cb>\<hr><v>...<>\</hr><>
+<cb>\<hr><>
+
+Displays a horizontal line.
+
+
+To set the color, use the <c>color<> css property.
 @
-@ hr
+@ hr, line, \<hr>
 
 
 
-### Block - List - Description List (dl)
+### Block - List - Description List / \<dl>
 
 <cb>\<dl><v>...<>\</dl><>
 
@@ -354,11 +359,11 @@ Should never contain bare simple content.
 	\<dd><v>Description 3<>\</dd>
 \</dl><>
 @
-@ Descriptive
+@ Descriptive, \<dl>, \<dt>, \<dd>
 
 
 
-### Block - List - Ordered List (ol)
+### Block - List - Ordered List \ \<ol>
 
 <cb>\<ol><v>...<>\</ol><>
 
@@ -405,11 +410,11 @@ CSS Style:
 Note: No <c>upper-greek<>
 Note: <c><v>...-alpha<><> and <c><v>...-latin<><> are the same
 @
-@ ol, li, numbered
+@ ol, li, \<ol>, \<li>, numbered
 
 
 
-### Block - List - Unordered List (ul)
+### Block - List - Unordered List / \<ul>
 
 <cb>\<ul><v>...<>\</ul><>
 
@@ -434,19 +439,21 @@ CSS Style:
 	<c>square<>		Square
 	<c>none<>		No List Marker
 @
-@ ul, li, bulleted
+@ ul, li, \<ul>, \<li>, bulleted
 
 
 
-### Block - Paragraph (p)
+### Block - Paragraph / \<p>
 
 <cb>\<p><v>...<>\</p><>
 
 Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
+@
+@ p, \<p>
 
 
 
-### Block - Table (table)
+### Block - Table / \<table>
 
 <cb>\<table><v>...<>\</table><>
 
@@ -457,10 +464,12 @@ Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
 		\</td>
 	\</tr>
 \</table><>
+@
+@ table, tr, td, \<table>, \<tr>, \<td>
 
 
 
-### Block - Table With Headings
+### Block - Table With Headings / \<th>
 
 <cb>\<table>
 	\<tr>
@@ -474,6 +483,8 @@ Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
 		\</td>
 	\</tr>
 \</table><>
+@
+@ table, tr, td, th, \<table>, \<tr>, \<td>, \<th>
 
 
 
@@ -521,7 +532,7 @@ Superscript			<c>\<sup><>
 
 
 
-### Abbreviation (abbr)
+### Abbreviation / \<abbr>
 
 <cb>\<abbr><v>...<>\</abbr><>
 
@@ -534,7 +545,7 @@ Example:
 
 
 
-### Acronym (acronym)
+### Acronym / \<acronym>
 
 <cb>\<acronym><v>...<>\</acronym><>
 
@@ -545,7 +556,7 @@ Example:
 
 
 
-### Cite (cite)
+### Cite / \<cite>
 
 <cb>\<cite><v>...<>\</cite><>
 
@@ -553,7 +564,7 @@ Use to cite work from someone else.
 
 
 
-### Code (code)
+### Code / \<code>
 
 <cb>\<code><v>...<>\</code><>
 
@@ -566,7 +577,7 @@ Example:
 
 
 
-### Code - Sample Output (samp)
+### Code - Sample Output / \<samp>
 
 <cb>\<samp><v>...<>\</samp><>
 
@@ -574,13 +585,13 @@ Use to show sample output from a piece of code.
 
 
 
-### Code Variables (var)
+### Code Variables / \<var>
 
 <cb>\<var><v>...<>\</var><>
 
 
 
-### Delete (del)
+### Delete / \<del>
 
 <cb>\<del><v>...<>\</del><>
 
@@ -591,7 +602,7 @@ Displays as a strikethrough.
 
 
 
-### Emphasis (em)
+### Emphasis / \<em>
 
 <cb>\<em><v>...<>\</em><>
 
@@ -600,7 +611,7 @@ Consider CSS instead.
 
 
 
-### Insert (ins)
+### Insert / \<ins>
 
 <cb>\<ins><v>...<>\</ins><>
 
@@ -611,13 +622,13 @@ Displays as an underline.
 
 
 
-### Keyboard Input (kbd)
+### Keyboard Input / \<kbd>
 
 <cb>\<kbd><v>...<>\</kbd><>
 
 
 
-### Mark (mark)
+### Mark / \<mark>
 
 <cb>\<mark><v>...<>\</mark><>
 
@@ -626,7 +637,7 @@ Typically highlighted with a yellow background.
 
 
 
-### Misspelled Word (u)
+### Misspelled Word / \<u>
 
 <cb>\<v><v>...<>\</u><>
 
@@ -634,7 +645,7 @@ Indicates a misspelled word on the document.
 
 
 
-### Quotes - Block (blockquote)
+### Quotes - Block / \<blockquote>
 
 <cb>\<blockquote><v>...<>\</blockquote><>
 
@@ -646,13 +657,13 @@ Example:
 
 
 
-### Quotes - Inline (q)
+### Quotes - Inline / \<q>
 
 <cb>\<q><v>...<>\</q><>
 
 
 
-### Small (small)
+### Small / \<small>
 
 <cb>\<small><v>...<>\</small><>
 
@@ -661,7 +672,7 @@ Use for copyright or fine print.
 
 
 
-### Strong (strong)
+### Strong / \<strong>
 
 <cb>\<strong><v>...<>\</strong><>
 
@@ -670,13 +681,13 @@ Consider CSS instead.
 
 
 
-### Subscript (sub)
+### Subscript / \<sub>
 
 <cb>\<sub><v>...<>\</sub><>
 
 
 
-### Superscript (sup)
+### Superscript / \<sup>
 
 <cb>\<sup><v>...<>\</sup><>
 

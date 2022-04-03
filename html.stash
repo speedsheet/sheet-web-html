@@ -90,7 +90,7 @@ Identifies the document as an HTML 5 doc.
 @ Samples
 
 
-## Template - Html Page
+### Template - Html Page
 
 <cb>\<!DOCTYPE html>
 \<html lang="en">
@@ -107,16 +107,18 @@ Identifies the document as an HTML 5 doc.
 \</html><>
 
 
-## Template - Html Page + CSS, JavaScript
+### Template - Html Page + CSS, JavaScript
 
 <cb>\<!DOCTYPE html>
 \<html lang="en">
 \<head>
-	\<meta charset="utf-8" />
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    \<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	\<title><v>Page Title<>\</title>
 
 	\<link rel="stylesheet" href="<v>css_file.css<>">
-	\<script src="<v>js_file.js<>">\</script>
+	\<script src="<v>javascript_file.js<>">\</script>
 
 	\<style>
 		<#>/* CSS Here: */<>
@@ -135,7 +137,58 @@ Identifies the document as an HTML 5 doc.
 \</body>
 \</html><>
 @
-@ JS, Cascading Style Sheet, witth
+@ JS, Cascading Style Sheet, with
+
+
+
+### Template - Html Page + Meta Tags
+
+<cb>\<!DOCTYPE html>
+\<html lang="en">
+\<head>
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	\<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	\<title><v>Page Title<>\</title>
+
+	\<meta name="description" content="<v>Page description.<>">
+	\<meta name="keywords" content="<v>keyword_1<>, <v>keyword_2<>, <v>...<>"
+	\<meta name="author" content="<v>AUthor Name<>">
+
+	\<meta property="og:title" content="<v>Page Title<>">
+	\<meta property="og:description" content="<v>Page description.<>">
+	\<meta property="og:type" content="website">
+	\<meta property="og:url" content="https://<v>site.com<>/<v>path<>">
+	\<meta property="og:image" content="<v>image_name.png<>">
+
+	\<link rel="icon" href="/favicon.ico">
+	\<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	\<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	\<link rel="stylesheet" href="<v>css_file.css<>">
+	\<script src="<v>javascript_file.js<>">\</script>
+
+	\<style>
+		<#>/* CSS Here: */<>
+	\</style>
+
+	\<script>
+		<#>// Javascript Here:<>
+	\</script>
+
+\</head>
+
+\<body>
+
+	\<h1><v>Heading<>\</h1>
+	\<p><v>Content<>\</p>
+
+	\<script src="<v>javascript_file_2.js<>">\</script>
+
+\</body>
+\</html><>
+@
+@ JS, javascript, Cascading Style Sheet, with
 
 
 
@@ -150,6 +203,8 @@ Tab		<c>&emsp;<>			(<b>Em<> <b>Sp<>ace) (Full Tab)
 &		<c>&amp;<>			(<b>Amp<>ersand)
 \<		<c>&lt;<>			(<b>L<>ess <b>T<>han)
 >		<c>&gt;<>			(<b>G<>reater <b>T<>han)
+'		<c>&#39;<>			(Single Quote)
+"		<c>&quot;<>			(Double Quote)
 
 :		<c>&#58;<>
 /		<c>&#47;<>
@@ -157,7 +212,6 @@ Tab		<c>&emsp;<>			(<b>Em<> <b>Sp<>ace) (Full Tab)
 ©		<c>&#0169;<>
 ®		<c>&#0174;<>
 ™		<c>&#0153;<>
-
 
 
 \#1  <s>-<>  Use to keep words/elements together that would ordinarily be separated.
@@ -995,6 +1049,8 @@ Creates: Multipart Form Data request.
 \</datalist><>
 
 <!>Need both? Get example.<>
+@
+@ combo dropdown box
 
 
 
@@ -1311,6 +1367,28 @@ Example:
 \</iframe><>
 @
 @ \<iframe>, src, width, height
+
+
+
+### Icons - Apple Home Screen Icon - Define
+
+These tags define the icon used to save a web link to the home screen of an Apple device.
+Place in the header section of your page.
+
+
+<cb>\<link rel="apple-touch-icon" href="/home_page_icon.png"/><>
+
+Screen Size Specific:
+
+<cb>\<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+
+\<link rel="apple-touch-icon" sizes="72x72" href="ipad-icon.png" />
+
+\<link rel="apple-touch-icon" sizes="114x114" href="iphone-4-icon.png" />
+
+\<link rel="apple-touch-icon" sizes="144x144" href="ipad-retina-icon.png" /><>
+@
+@ apple-touch-icon, apple touch
 
 
 

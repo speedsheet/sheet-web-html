@@ -49,6 +49,7 @@ Identifies the document as an HTML 5 doc.
 	<v>...<>
 \</style><>
 @
+@ \<style>
 @ Add, Include, Cascading Style Sheet
 
 
@@ -56,6 +57,8 @@ Identifies the document as an HTML 5 doc.
 ### CSS - In Line
 
 <cb>\<<v>element<> style="<v>...<>"><v>...<><>
+@
+@ style=""
 
 
 
@@ -63,25 +66,42 @@ Identifies the document as an HTML 5 doc.
 
 <cb>\<link type="text/css" media="all" rel="stylesheet" href="<v>css_file<>"><>
 @
+@ \<link>, type="text/css", rel="stylesheet"
 @ Add, Include, Cascading Style Sheet
 
 
 
-### Java Script - Inline
+### JavaScript - Inline
 
 <cb>\<script>
 	<v>javascript...<>
 \</script><>
 @
+@ \<script>
 @ Add, Include, JS
 
 
 
-### Java Script - File
+### JavaScript - File
 
 <cb>\<script type="text/javascript" src="<v>javascript_file<>">\</script><>
 @
+@ \<script>, type="text/javascript", src=""
 @ Add, Include, JS
+
+
+
+### JavaScript - Alert JavaScript Disabled
+
+<cb>\<noscript>
+	<v>JavaScript Disabled Message<>
+\</noscript><>
+
+This will show the HTML between \<noscript> and \</noscript> whenever JavaScript is disabled.
+
+Place this inside the body of your page.
+@
+@ \<noscript>, js
 
 
 
@@ -95,7 +115,7 @@ Identifies the document as an HTML 5 doc.
 <cb>\<!DOCTYPE html>
 \<html lang="en">
 \<head>
-	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
 	\<title><v>Page Title<>\</title>
 \</head>
 \<body>
@@ -112,7 +132,7 @@ Identifies the document as an HTML 5 doc.
 <cb>\<!DOCTYPE html>
 \<html lang="en">
 \<head>
-	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
     \<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	\<title><v>Page Title<>\</title>
@@ -146,7 +166,7 @@ Identifies the document as an HTML 5 doc.
 <cb>\<!DOCTYPE html>
 \<html lang="en">
 \<head>
-	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
 	\<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	\<title><v>Page Title<>\</title>
@@ -543,46 +563,118 @@ Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
 
 
 # Non-Semantic Text Elements
+@
+@ formats, formatting
 
 
-## Summary
+## Non-Semantic Text Elements - Summary
 
 Note: These are generally not recommended. Use semantic elements instead.
 
-Bold				<c>\<b><>
-Strikethrough		<c>\<s><>
-					<c>\<strike><>	(Deprecated)
-Underline			<c>\<u><>
+<card><table><col>Bold<><col><c>\<b><><>
+<col>Strikethrough<><col><c>\<s><><>
+<col><><col><c>\<strike><><><col>(Deprecated)<>
+<col>Underline<><col><c>\<u><><><><>
+
+
+## Non-Semantic Text Elements - Details
+
+
+### Bold / \<b>
+
+<cb>\<b><>
+
+Usage:
+
+<cb>\<b><v>text<>\</b><>
+
+
+Displays text in bold.
+
+Use to highlight keywords or names.
+Does not indicate that the text is important.
+@
+@ \<b>, b
+
+
+
+### Italic / \<i>
+
+<cb>\<i><>
+
+Usage:
+
+<cb>\<i><v>text<>\</i><>
+
+
+Displays text in italic.
+
+Use to highlight keywords or names.
+Use to indigate phrase, title or term.
+@
+@ \<i>, i
+
+
+
+### Strikethrough / \<s>
+
+<cb>\<i><>
+
+Usage:
+
+<cb>\<s><v>text<>\</s><>
+
+
+Displays a strikethrough on the text.
+@
+@ \<s>, s
+
+
+
+### Underline / \<u>
+
+<cb>\<u><>
+
+Usage:
+
+<cb>\<u><v>text<>\</u><>
+
+
+Displays an underline under the text.
+@
+@ \<s>, s
 
 
 
 # Semantic Text Elements
+@
+@ formats, formatting
 
 
-## Summary
+## Semantic Text Elements - Summary
 
-Abbreviation			<c>\<abbr><>
-Acronym				<c>\<acronym><>
-Cite					<c>\<cite><>
-Code				<c>\<code><>
-Code Sample			<c>\<samp><>
-Code Variables		<c>\<var><>
-Delete				<c>\<del><>
-Emphasis			<c>\<em><>
-Insert				<c>\<ins><>
-Keyboard Input		<c>\<kbd><>
-Mark				<c>\<mark><>
-Misspelled Word		<c>\<v><>
-Quotes - Block		<c>\<blockquote><>
-Quotes - Inline		<c>\<q><>
-Small				<c>\<small><>
-Strong				<c>\<strong><>
-Subscript			<c>\<sub><>
-Superscript			<c>\<sup><>
+<card><table><col>Abbreviation<><col><c>\<abbr><><>
+<col>Acronym<><col><c>\<acronym><><>
+<col>Cite<><col><c>\<cite><><>
+<col>Code<><col><c>\<code><><>
+<col>Code Sample<><col><c>\<samp><><>
+<col>Code Variables<><col><c>\<var><><>
+<col>Delete<><col><c>\<del><><>
+<col>Emphasis<><col><c>\<em><><>
+<col>Insert<><col><c>\<ins><><>
+<col>Keyboard Input<><col><c>\<kbd><><>
+<col>Mark<><col><c>\<mark><><>
+<col>Misspelled Word<><col><c>\<u><><>
+<col>Quotes - Block<><col><c>\<blockquote><><>
+<col>Quotes - Inline<><col><c>\<q><><>
+<col>Small<><col><c>\<small><><>
+<col>Strong<><col><c>\<strong><><>
+<col>Subscript<><col><c>\<sub><><>
+<col>Superscript<><col><c>\<sup><><><><>
 
 
 
-## Details
+## Semantic Text Elements - Details
 
 
 
@@ -660,8 +752,15 @@ Displays as a strikethrough.
 
 <cb>\<em><v>...<>\</em><>
 
+Indicates something important.
 Typically formatted as italics.
+
+Use to highight important parts of text.
+Use to indicate change in tone.
+
 Consider CSS instead.
+@
+@ italic, \<i>, important
 
 
 
@@ -688,12 +787,14 @@ Displays as an underline.
 
 Indicates some text that needs to be highlighted.
 Typically highlighted with a yellow background.
+@
+@ highlight
 
 
 
 ### Misspelled Word / \<u>
 
-<cb>\<v><v>...<>\</u><>
+<cb>\<u><v>...<>\</u><>
 
 Indicates a misspelled word on the document.
 
@@ -730,8 +831,12 @@ Use for copyright or fine print.
 
 <cb>\<strong><v>...<>\</strong><>
 
+Indicates something important.
 Typically formatted as Bold.
+
 Consider CSS instead.
+@
+@ bold, \<b>, important
 
 
 
@@ -744,6 +849,41 @@ Consider CSS instead.
 ### Superscript / \<sup>
 
 <cb>\<sup><v>...<>\</sup><>
+
+
+
+### \<b> vs \<strong> vs \<i> vs \<em>
+
+<c>\<b><>:
+
+<*>Displays in <b>Bold<>
+Does Not Indicate Importance
+Use for Keywords, Names<>
+
+
+<c>\<strong><>:
+
+<*>Displays in <b>Bold<>
+Indicates Importance
+Use for Stronger Emphasis Than <c>\<em><><>
+
+
+<c>\<i><>:
+
+<*>Displays in <i>Italic<>
+Does Not Indicate Importance
+Use for keywords or names<>
+
+
+<c>\<em><>:
+
+<*>Displays in <i>Italic<>
+Indicates Importance
+Use For Change In Tone
+Use for Less Emphasis than <c>\<strong><><>
+@
+@ \<b>, \<em>, \<i>, \<strong>
+@ bold, emphasis, italic, strong
 
 
 
@@ -791,7 +931,7 @@ Consider CSS instead.
 
 ### Button - Open Link
 
-<cb>\<input type="button" onclick="location.href='<v>https://speedsheet.io<>';" value="<v>Go to SpeedSheet<>" /><>
+<cb>\<input type="button" onclick="location.href='<v>https://speedsheet.io<>';" value="<v>Go to SpeedSheet<>" ><>
 
 
 
@@ -834,10 +974,10 @@ Consider CSS instead.
 	\<fieldset>
 		\<dl>
 			\<dt>\<label for="<v>fieldName<>"><v>Label<>\</label>\</dt>
-			\<dd>\<input type="<v>type<>" name="<v>fieldName<>" />\</dd>
+			\<dd>\<input type="<v>type<>" name="<v>fieldName<>" >\</dd>
 		\</dl>
-	\<fieldset/>
-\<form/><>
+	\</fieldset>
+\</form><>
 @
 @ Field Set
 
@@ -851,13 +991,13 @@ Consider CSS instead.
 		\<legend><v>Legend Name<>\</legend>
 
 		\<label for="<v>fieldName1<>"><v>Label 1<>\</label>
-		\<input type="type" name="<v>fieldName1<>" />
+		\<input type="type" name="<v>fieldName1<>" >
 
 		\<label for="<v>fieldName2<>"><v>Label 2<>\</label>
-		\<input type="type" name="<v>fieldName2<>" />
+		\<input type="type" name="<v>fieldName2<>" >
 		<v>...<>
-	\<fieldset/>
-\<form/><>
+	\</fieldset>
+\</form><>
 
 
 Legend - Label the group of fields.
@@ -868,7 +1008,7 @@ Legend - Label the group of fields.
 
 ### Form - Input Button
 
-<cb>\<input type="submit" value="<v>Submit Label<>" onclick="<v>javaScriptFunction1<>()" /><>
+<cb>\<input type="submit" value="<v>Submit Label<>" onclick="<v>javaScriptFunction1<>()" ><>
 
 Using Button Element (action = submit):
 
@@ -884,15 +1024,15 @@ If missing, the button does nothing.
 
 ### Form - Input Checkbox
 
-<cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" /><v>Label 1\<br/><><>
+<cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" ><v>Label 1\<br><><>
 
-<cb>\<input type="radio" name="<v>field_2<>" checked/><v>Label 2<><>
+<cb>\<input type="radio" name="<v>field_2<>" checked><v>Label 2<><>
 
 
 
 ### Form - Input Color Picker
 
-<cb>\<input type="color" /><>
+<cb>\<input type="color" ><>
 
 
 Not supported on all browsers.
@@ -901,7 +1041,7 @@ Not supported on all browsers.
 
 ### Form - Input Date - Month
 
-<cb>\<input type="month" /><>
+<cb>\<input type="month" ><>
 
 
 Mobile devices may display special keyboard.
@@ -911,7 +1051,7 @@ Not supported on all browsers.
 
 ### Form - Input Date - Week
 
-<cb>\<input type="week" /><>
+<cb>\<input type="week" ><>
 
 
 Mobile devices may display special keyboard.
@@ -967,14 +1107,14 @@ Selected Item:
 
 ### Form - Input Field
 
-<cb>\<input /><>
+<cb>\<input ><>
 
 <cb>\<input
 		name="<v>fieldName<>"
 		value="<v>actual value<>"
 		size="<v>displayWidth<>"
 		maxLength="<v>maxLength<>"
-		type="<v>type<>" /><>
+		type="<v>type<>" ><>
 
 
 <c><v>type<><>  =  <c>text<>  <s>|<>  <c>password<>  <s>|<>  <c>checkbox<>  <s>|<>  <c>radio<>  <s>|<>  <c>submit<>  <s>|<>  <c>hidden<>  <s>|<>  <c>button<>  <s>|<>  <c>image<>  <s>|<>  <c>reset<>
@@ -983,7 +1123,7 @@ Selected Item:
 
 ### Form - Input File
 
-<cb>\<input type="file" name="<v>fieldName<>" /><>
+<cb>\<input type="file" name="<v>fieldName<>" ><>
 
 Requires:
 
@@ -1017,7 +1157,7 @@ Creates: Multipart Form Data request.
 
 ### Form - Input Hidden
 
-<cb>\<input type="hidden" name="<v>fieldName<>" value="<v>value<>" /><>
+<cb>\<input type="hidden" name="<v>fieldName<>" value="<v>value<>" ><>
 
 
 
@@ -1040,7 +1180,7 @@ Creates: Multipart Form Data request.
 
 ### Form - Input List - Data List
 
-<cb>\<input list="<v>list_1_name<>"/><>
+<cb>\<input list="<v>list_1_name<>" ><>
 	
 <cb>\<datalist id="<v>list_1_name<>">
 	\<option value="<v>Value 1<>">
@@ -1056,18 +1196,18 @@ Creates: Multipart Form Data request.
 
 ### Form - Input Password
 
-<cb>\<input type="text" name="<v>fieldName<>" value="<v>default value<>" /><>
+<cb>\<input type="text" name="<v>fieldName<>" value="<v>default value<>" ><>
 
 
 
 ### Form - Input Radio Button
 
-<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"/><v>Field Label 1<>\<br/>
-\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"/><v>Field Label 2<><>
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"><v>Field Label 1<>\<br>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"><v>Field Label 2<><>
 
 Checked:
 
-<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>" checked /><v>Field Label 1<>\<br/><>
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>" checked ><v>Field Label 1<>\<br><>
 
 
 <c>checked<>  <s>-<>  Marks which radio button is currently selected.
@@ -1079,11 +1219,11 @@ Checked:
 
 ### Form - Input Range Selector
 
-<cb>\<input type="<v>range<>" min="<v>min_value<>" max="<v>max_value<>" value="<v>some_value<>" /><>
+<cb>\<input type="<v>range<>" min="<v>min_value<>" max="<v>max_value<>" value="<v>some_value<>" ><>
 
 Step Value:
 
-<cb>\<input type="<v>range<>" <v>...<> step="<v>step_value<>" <v>...<> /><>
+<cb>\<input type="<v>range<>" <v>...<> step="<v>step_value<>" <v>...<> ><>
 
 
 Step Value - Sets the size between one value and the next.
@@ -1092,13 +1232,15 @@ Step Value - Sets the size between one value and the next.
 
 ### Form - Input Submit
 
-<cb>\<input type="submit" value="<v>Submit Label<>" /><>
+<cb>\<input type="submit" value="<v>Submit Label<>" ><>
 
 
 
 ### Form - Input Text
 
-<cb>\<input type="text" name="<v>field1<>" placeholder="<v>placeholder text<>" value="<v>default value<>" size="<v>column_count<>" /><>
+<cb>\<input type="text" name="<v>field1<>"><>
+
+<cb>\<input type="text" name="<v>field1<>" placeholder="<v>placeholder text<>" value="<v>default value<>" size="<v>column_count<>" ><>
 
 Max Length:
 
@@ -1115,7 +1257,7 @@ Pattern Filter:
 
 ### Form - Input Text - Search
 
-<cb>\<input type="Search" /><>
+<cb>\<input type="Search" ><>
 
 Gives 'x' to clear fields on mobile devices, some browsers.
 
@@ -1123,7 +1265,7 @@ Gives 'x' to clear fields on mobile devices, some browsers.
 
 ### Form - Input Text Multiline
 
-<cb>\<textarea rows=rowCount cols=colCount name="field1">\</textarea><>
+<cb>\<textarea rows=<v>row_count<> cols=<v>column_count<> name="<v>field1<>">\</textarea><>
 
 Disable Word Wrap:
 
@@ -1133,7 +1275,7 @@ Disable Word Wrap:
 
 ### Form - Input Type - Email
 
-<cb>\<input type="email" /><>
+<cb>\<input type="email" ><>
 
 Mobile devices may display special keyboard.
 Not supported on all browsers.
@@ -1144,7 +1286,7 @@ Not supported on all browsers.
 
 ### Form - Input Type - Number
 
-<cb>\<input type="number" /><>
+<cb>\<input type="number" ><>
 
 Gives number increment decrement control.
 
@@ -1155,7 +1297,7 @@ Not supported on all browsers.
 
 ### Form - Input Type - Phone
 
-<cb>\<input type="tel" /><>
+<cb>\<input type="tel" ><>
 
 Mobile devices may display special keyboard.
 Not supported on all browsers.
@@ -1166,7 +1308,7 @@ Not supported on all browsers.
 
 ### Form - Input Type - Url
 
-<cb>\<input type="url" /><>
+<cb>\<input type="url" ><>
 
 Mobile devices may display special keyboard.
 Not supported on all browsers.
@@ -1215,7 +1357,7 @@ Returns true if text is mismatched against regex pattern.
 
 Set:
 
-<cb>\<input type="range" max="<v>max_value<>" <v>...<> /><>
+<cb>\<input type="range" max="<v>max_value<>" <v>...<> ><>
 
 Check:
 
@@ -1231,7 +1373,7 @@ Returns true when input value is greater than <c><v>max_value<><>.
 
 Set:
 
-<cb>\<input type="range" min="<v>min_value<>" step="<v>step_value<>" <v>...<> /><>
+<cb>\<input type="range" min="<v>min_value<>" step="<v>step_value<>" <v>...<> ><>
 
 Check:
 
@@ -1247,7 +1389,7 @@ Happens when the actual value is outside what is possible with the min and step 
 
 Set:
 
-<cb>\<input type="range" min="<v>min_value<>" <v>...<> /><>
+<cb>\<input type="range" min="<v>min_value<>" <v>...<> ><>
 
 Check:
 
@@ -1290,19 +1432,62 @@ Check:
 
 # Images
 @
-@ \<img>
+@ \<img>, img
 
 
 ### Image - Basics
 
 <cb>\<img src="<v>image_path<>"><>
 
-<cb>\<img src="<v>image_path<>" alt="<v>description<>"><>
+<cb>\<img src="<v>image_path<>" alt="<v>description<>" width="<v>value<>" height="<v>value<>"><>
 
 
 <c>\</img><> is not required.
 @
-@ img src
+@ img src, alt, width, height
+
+
+
+# Label
+
+<cb>\<label for="<v>target_id<>><v>Label Text<>\</><>
+
+<cb>\<label form="<v>target_form_id<><v>Label Text<>\</><>
+
+
+Binds a label to another element.
+
+
+Why:
+
+Used by screen readers.
+Increases target area (label + target component).
+
+
+Use With:
+
+<in-2><cb>\<input type="checkbox">
+\<input type="color">
+\<input type="date">
+\<input type="datetime-local">
+\<input type="email">
+\<input type="file">
+\<input type="month">
+\<input type="number">
+\<input type="password">
+\<input type="radio">
+\<input type="range">
+\<input type="search">
+\<input type="tel">
+\<input type="text">
+\<input type="time">
+\<input type="url">
+\<input type="week">
+\<meter>
+\<progress>
+\<select>
+\<textarea><><>
+
 
 
 
@@ -1319,7 +1504,7 @@ Check:
           minimum-scale = <v>float_value<> ,
           maximum-scale = <v>float_value<> ,
           user-scalable = ["yes" | "no"]
-          " /><>
+          " ><>
 
 
 ### Viewport - Standard
@@ -1376,17 +1561,17 @@ These tags define the icon used to save a web link to the home screen of an Appl
 Place in the header section of your page.
 
 
-<cb>\<link rel="apple-touch-icon" href="/home_page_icon.png"/><>
+<cb>\<link rel="apple-touch-icon" href="/home_page_icon.png"><>
 
 Screen Size Specific:
 
-<cb>\<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+<cb>\<link rel="apple-touch-icon" href="touch-icon-iphone.png" >
 
-\<link rel="apple-touch-icon" sizes="72x72" href="ipad-icon.png" />
+\<link rel="apple-touch-icon" sizes="72x72" href="ipad-icon.png" >
 
-\<link rel="apple-touch-icon" sizes="114x114" href="iphone-4-icon.png" />
+\<link rel="apple-touch-icon" sizes="114x114" href="iphone-4-icon.png" >
 
-\<link rel="apple-touch-icon" sizes="144x144" href="ipad-retina-icon.png" /><>
+\<link rel="apple-touch-icon" sizes="144x144" href="ipad-retina-icon.png" ><>
 @
 @ apple-touch-icon, apple touch
 
@@ -1407,7 +1592,7 @@ Example:
 
 ### Page - Redirect
 
-<cb>\<meta http-equiv="refresh" content="<v>time_in_seconds<>; url=<v>new_page_url<>" /><>
+<cb>\<meta http-equiv="refresh" content="<v>time_in_seconds<>; url=<v>new_page_url<>" ><>
 
 
 Redirects to <c><v>new_page_url<><> after <c><v>time_in_seconds<><>.
@@ -1416,7 +1601,7 @@ Watch out for the funky syntax in <c>content="<v>...<>"<>.
 
 Example:
 
-<cb>\<meta http-equiv="refresh" content="3; url=index.html" /><>
+<cb>\<meta http-equiv="refresh" content="3; url=index.html" ><>
 
 
 # Glossary

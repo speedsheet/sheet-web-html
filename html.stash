@@ -2,7 +2,7 @@
 <b>Find what you need, faster.<>
 
 
-# Summary
+# HTML Fundamentals
 
 
 ### Case
@@ -32,7 +32,7 @@ Tags should be in lower case (W3C standards).
 
 Reference by id with "#".
 Element ids must be unique.
-
+;q
 
 
 ### Document Type
@@ -173,7 +173,7 @@ Place this inside the body of your page.
 
 	\<meta name="description" content="<v>Page description.<>">
 	\<meta name="keywords" content="<v>keyword_1<>, <v>keyword_2<>, <v>...<>"
-	\<meta name="author" content="<v>AUthor Name<>">
+	\<meta name="author" content="<v>Author Name<>">
 
 	\<meta property="og:title" content="<v>Page Title<>">
 	\<meta property="og:description" content="<v>Page description.<>">
@@ -543,22 +543,33 @@ Do not put outside <c>\<div><> tag. Will render but strongly discouraged!
 
 
 
-### Block - Table With Headings / \<th>
+### Block - Table With Heading, Footer
 
 <cb>\<table>
-	\<tr>
-		\<th>
-			<v>Heading<>
-		\</th>
-	\</tr>
-	\<tr>
-		\<td>
-			<v>...<>
-		\</td>
-	\</tr>
+	\<thead>
+		\<tr>
+			\<th>
+				<v>Heading<>
+			\</th>
+		\</tr>
+	\</thead>
+	\<tbody>
+		\<tr>
+			\<td>
+				<v>...<>
+			\</td>
+		\</tr>
+	\</tbody>
+	\<tfoot>
+		\<tr>
+			\<td>
+				<v>Footer<>
+			\</td>
+		\</tr>
+	\</tfoot>
 \</table><>
 @
-@ table, tr, td, th, \<table>, \<tr>, \<td>, \<th>
+@ table, tr, td, th, \<table>, \<tr>, \<td>, \<th>, \<thead>, \<tfoot>
 
 
 
@@ -936,6 +947,8 @@ Use for Less Emphasis than <c>\<strong><><>
 
 
 # Form Element
+@
+@ form-only
 
 
 ## Form - Basics
@@ -1006,27 +1019,55 @@ Legend - Label the group of fields.
 
 			
 
-### Form - Input Button
+### Form - Button - Submit
+
+<cb>\<button><v>label<>\</button><>
+
+<cb>\<button type="submit"><v>label<>\</button><>
+
+
+Buttons inside forms automatically call submit when clicked.
+
+Form buttons default to <c>type="submit"<>.
+@
+@ call submit
+
+
+
+### Form - Button - Submit Call JavaScript
 
 <cb>\<input type="submit" value="<v>Submit Label<>" onclick="<v>javaScriptFunction1<>()" ><>
 
 Using Button Element (action = submit):
 
+<cb>\<button type="button" onclick="<v>javaScriptFunction1<>()"><v>label<>\</button><>
+
+
+Use either of these to call JavaScript.
+
+Use <c>type="button"<> inside a form only. This prevents the default submit action.
+
+
+
+### Form - Input Button - No Submit
+
 <cb>\<button type="button"><v>label<>\</button><>
 
-Use this to call javascript.
 
-Use <c>type="button"<> inside a form only.
-Sets button to submit action.
-If missing, the button does nothing.
+Use this prevent the button from submitting the form.
+
+<c>type="button"<> is only needed inside a form.
+Form buttons default to <c>type="submit"<> automatically.
+@
+@ does not call submit, default
 
 
 
 ### Form - Input Checkbox
 
-<cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" ><v>Label 1\<br><><>
+<cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" ><v>Label 1<>\<br><><>
 
-<cb>\<input type="radio" name="<v>field_2<>" checked><v>Label 2<><>
+<cb>\<input type="checkbox" name="<v>field_2<>" checked><v>Label 2<><>
 
 
 
@@ -1255,6 +1296,12 @@ Pattern Filter:
 
 
 
+### Form - Input Text - Placeholder
+
+<cb>\<input type="text" name="<v>field1<>" placeholder="<v>placeholder text<>"><>
+
+
+
 ### Form - Input Text - Search
 
 <cb>\<input type="Search" ><>
@@ -1450,9 +1497,9 @@ Check:
 
 # Label
 
-<cb>\<label for="<v>target_id<>><v>Label Text<>\</><>
+<cb>\<label for="<v>target_id<>"><v>Label Text<>\</><>
 
-<cb>\<label form="<v>target_form_id<><v>Label Text<>\</><>
+<cb>\<label form="<v>target_form_id<>"><v>Label Text<>\</><>
 
 
 Binds a label to another element.

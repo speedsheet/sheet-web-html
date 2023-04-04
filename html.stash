@@ -1,5 +1,5 @@
 # <#>HTML<> SpeedSheet
-<b>Find what you need, faster.<>
+<b>Find it faster.<>
 
 
 # HTML Fundamentals
@@ -107,10 +107,10 @@ Place this inside the body of your page.
 
 # Templates
 @
-@ Samples
+@ Samples, html, with
 
 
-### Template - Html Page
+### Template - HTML Page
 
 <cb>\<!DOCTYPE html>
 \<html lang="en">
@@ -127,7 +127,77 @@ Place this inside the body of your page.
 \</html><>
 
 
-### Template - Html Page + CSS, JavaScript
+
+### Template - HTML Page + Format Styling
+
+<cb>\<!DOCTYPE html>
+\<html lang="en">
+\<head>
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+	\<title><v>Page Title<>\</title>
+
+	\<style>
+
+		html {
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			line-height: 1.15;
+			margin: 10;
+			padding: 0;
+		}
+
+		article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+			display: block;
+		}
+
+		*, ::after, ::before {
+			box-sizing: border-box;
+		}
+
+		button, input {
+			overflow: visible;
+		}
+
+		button, input, optgroup, select, textarea {
+			margin: 0;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+		}
+
+		div {
+			margin: 0;
+		}
+
+		p {
+			margin: 0 0 1rem 0;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 0 0.5rem 0;
+			line-height: 1.2;
+		}
+
+	\</style>
+
+\</head>
+\<body>
+
+	\<h1><v>Heading<>\</h1>
+	\<p><v>Content<>\</p>
+
+\</body>
+\</html><>
+
+
+
+
+
+### Template - HTML Page + CSS, JavaScript
 
 <cb>\<!DOCTYPE html>
 \<html lang="en">
@@ -161,7 +231,7 @@ Place this inside the body of your page.
 
 
 
-### Template - Html Page + Meta Tags
+### Template - HTML Page + Meta Tags
 
 <cb>\<!DOCTYPE html>
 \<html lang="en">
@@ -185,17 +255,6 @@ Place this inside the body of your page.
 	\<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 	\<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-	\<link rel="stylesheet" href="<v>css_file.css<>">
-	\<script src="<v>javascript_file.js<>">\</script>
-
-	\<style>
-		<#>/* CSS Here: */<>
-	\</style>
-
-	\<script>
-		<#>// Javascript Here:<>
-	\</script>
-
 \</head>
 
 \<body>
@@ -209,6 +268,100 @@ Place this inside the body of your page.
 \</html><>
 @
 @ JS, javascript, Cascading Style Sheet, with
+
+
+
+### Template - HTML Page - With Everything
+
+<cb>\<!DOCTYPE html>
+\<html lang="en">
+\<head>
+	\<meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+	\<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	\<title><v>Page Title<>\</title>
+
+	\<meta name="description" content="<v>Page description.<>">
+	\<meta name="keywords" content="<v>keyword_1<>, <v>keyword_2<>, <v>...<>"
+	\<meta name="author" content="<v>Author Name<>">
+
+	\<meta property="og:title" content="<v>Page Title<>">
+	\<meta property="og:description" content="<v>Page description.<>">
+	\<meta property="og:type" content="website">
+	\<meta property="og:url" content="https://<v>site.com<>/<v>path<>">
+	\<meta property="og:image" content="<v>image_name.png<>">
+
+	\<link rel="icon" href="/favicon.ico">
+	\<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	\<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	\<style>
+
+		html {
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+			line-height: 1.15;
+			margin: 10;
+			padding: 0;
+		}
+
+		article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+			display: block;
+		}
+
+		*, ::after, ::before {
+			box-sizing: border-box;
+		}
+
+		button, input {
+			overflow: visible;
+		}
+
+		button, input, optgroup, select, textarea {
+			margin: 0;
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit;
+		}
+
+		div {
+			margin: 0;
+		}
+
+		p {
+			margin: 0 0 1rem 0;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 0 0.5rem 0;
+			line-height: 1.2;
+		}
+
+	\</style>
+
+	\<link rel="stylesheet" href="<v>css_file.css<>">
+	\<script src="<v>javascript_file.js<>">\</script>
+
+	\<style>
+		<#>/* CSS Here: */<>
+	\</style>
+
+	\<script>
+		<#>// Javascript Here:<>
+	\</script>
+
+\</head>
+\<body>
+
+	\<h1><v>Heading<>\</h1>
+	\<p><v>Content<>\</p>
+
+\</body>
+\</html><>
 
 
 
@@ -250,16 +403,35 @@ Display on same line:
 @ &nbsp; nbsp;, &, \<, >, :, /, @, ©, Copyright, ®, Registered Trademark
 
 
-# Primary Page Elements <!>!!!!<>
 
-<!>Consider sub-sections for these!<>
-
-<c>doctype<>		Declares html standard used.
-<c>html<>		Root element
-<c>head<>		Document Metadata
-<c>body<>		Document Data
+# Element
 @
-@ HTML, doctype, html, head, body
+@ elements, element-only
+
+
+### Element Attribute Basics
+
+<table><col>ID<><col><c>\<<v>element<> id="<v>id<>"><><>
+<col>Class<><col><c>\<<v>element<> class="<v>class_1<> <v>class_2<>"><><>
+<col>Tab Index (Tab Stop)<><col><c>\<<v>element<> tabindex="<v>tab_stop_number<>"><><><>
+@
+@ tags
+
+
+
+### Element - Class
+
+<cb>\<<v>element<> class="<v>class_1<> <v>class_2<>"><>
+@
+@ set, attribute
+
+
+
+### Element - ID
+
+<cb>\<<v>element<> id="<v>id<>"><>
+@
+@ set, attribute
 
 
 
@@ -629,7 +801,7 @@ Use to indigate phrase, title or term.
 
 ### Strikethrough / \<s>
 
-<cb>\<i><>
+<cb>\<s><>
 
 Usage:
 
@@ -710,6 +882,20 @@ Example:
 Example:
 
 <cb>\<acronym title="<v>Hypertext Markup Language<>"><v>HTML<>\</acronym><>
+
+
+
+### Address / \<address>
+
+<cb>\<address><v>...<>\</address><>
+
+
+Use for contact information including email or telephone number.
+
+
+Example:
+
+<cb>\<address><v>742 Evergreen Terrace, Springfield, WA<>\</address><>
 
 
 
@@ -863,46 +1049,11 @@ Consider CSS instead.
 
 
 
-### \<b> vs \<strong> vs \<i> vs \<em>
-
-<c>\<b><>:
-
-<*>Displays in <b>Bold<>
-Does Not Indicate Importance
-Use for Keywords, Names<>
-
-
-<c>\<strong><>:
-
-<*>Displays in <b>Bold<>
-Indicates Importance
-Use for Stronger Emphasis Than <c>\<em><><>
-
-
-<c>\<i><>:
-
-<*>Displays in <i>Italic<>
-Does Not Indicate Importance
-Use for keywords or names<>
-
-
-<c>\<em><>:
-
-<*>Displays in <i>Italic<>
-Indicates Importance
-Use For Change In Tone
-Use for Less Emphasis than <c>\<strong><><>
-@
-@ \<b>, \<em>, \<i>, \<strong>
-@ bold, emphasis, italic, strong
-
-
-
 # Layout Elements
 
 
 
-## Semantic Layout Elements - Summary <!>!!!!<>
+## Semantic Layout Elements - Summary
 
 <!>Consider sub-sections for these!<>
 
@@ -920,17 +1071,107 @@ Use for Less Emphasis than <c>\<strong><><>
 
 
 
+## Semantic Layout Elements - Detail
+@
+@ page elements
 
-## Layout Elements - Details
+
+### Article / \<article>
+
+<cb>\<article><v>...<>\</article><>
+@
+@ \<article>
+
+
+
+### Aside / \<aside>
+
+<cb>\<aside><v>...<>\</aside><>
+
+For content is only indirectly related to the main article / content.
+
+Use with \<article>.
+@
+@ \<aside>
+
+
+
+### Details / \<details>
+
+<cb>\<details><v>...<>\</details><>
+@
+@ \<details>
+
+
+
+### Footer / \<footer>
+
+<cb>\<footer><v>...<>\</footer><>
+@
+@ \<footer>
+
+
+
+### Header / \<header>
+
+<cb>\<header><v>...<>\</header><>
+@
+@ \<header>
+
+
+
+### Main / \<main>
+
+<cb>\<main><v>...<>\</main><>
+@
+@ \<main>
+
+
+
+### Navigation / \<nav>
+
+<cb>\<nav><v>...<>\</nav><>
+
+A container for navigation links.
+
+Can have one or more per page.
+@
+@ \<nav>
+
+
+
+### Section / \<section>
+
+<cb>\<section><v>...<>\</section><>
+@
+@ \<section>
+
+
+
+### Summary / \<summary>
+
+<cb>\<summary><v>...<>\</summary><>
+@
+@ \<summary>
 
 
 
 # Button
 
 
-### Button - Simple
+### Button - Basic
 
 <cb>\<button><v>caption<>\</button><>
+
+
+
+### Button - Button Type
+
+<cb>\<button type="<v>type<>"><v>caption<>\</button><>
+
+type = <c>button <s>|<> submit <s>|<> reset<>
+@
+@ button, submit, reset
 
 
 
@@ -942,7 +1183,22 @@ Use for Less Emphasis than <c>\<strong><><>
 
 ### Button - Open Link
 
-<cb>\<input type="button" onclick="location.href='<v>https://speedsheet.io<>';" value="<v>Go to SpeedSheet<>" ><>
+
+<cb>\<input type="button" onclick="location.href='<v>url<>';" value="<v>Label<>"><>
+
+
+Example:
+
+<cb>\<input type="button" onclick="location.href='<v>https://speedsheet.io<>';" value="<v>Go to SpeedSheet<>"><>
+
+
+
+### Button - Click Trigger Events
+
+<cb>Click | Enter | Space<>
+
+
+Any of these events will trigger a button click.
 
 
 
@@ -1068,6 +1324,8 @@ Form buttons default to <c>type="submit"<> automatically.
 <cb>\<input type="checkbox" name="<v>field_1<>" value="<v>return_value<>" ><v>Label 1<>\<br><><>
 
 <cb>\<input type="checkbox" name="<v>field_2<>" checked><v>Label 2<><>
+@
+@ check box
 
 
 
@@ -1215,23 +1473,7 @@ Creates: Multipart Form Data request.
 	<v>...<><>
 @
 @ input - drop down list
-@ input drop down groups
-
-
-
-### Form - Input List - Data List
-
-<cb>\<input list="<v>list_1_name<>" ><>
-	
-<cb>\<datalist id="<v>list_1_name<>">
-	\<option value="<v>Value 1<>">
-	\<option value="<v>Value 2<>">
-	...
-\</datalist><>
-
-<!>Need both? Get example.<>
-@
-@ combo dropdown box
+@ input drop down groups, <select>
 
 
 
@@ -1243,18 +1485,54 @@ Creates: Multipart Form Data request.
 
 ### Form - Input Radio Button
 
-<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"><v>Field Label 1<>\<br>
-\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"><v>Field Label 2<><>
-
-Checked:
-
-<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>" checked ><v>Field Label 1<>\<br><>
-
-
-<c>checked<>  <s>-<>  Marks which radio button is currently selected.
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"><v>Label 1<>>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"><v>Label 2<>>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 3<>"><v>Label 3<>><>
+@
+@ input, radio, "radio", type="radio", value=
 
 
-<!>Field labels after input field?<>
+Creates a set of connected radio buttons.
+
+Only one radio button can be checked at a time.
+Labels are displayed after the radio button.
+
+
+
+### Form - Input Radio Button - Set Checked
+
+<cb>\<input type="radio" <v>...<> checked ><>
+
+Usage:
+
+<cb>\<input type="radio" name="<v>fieldName1<>" value="<v>Value 1<>"><v>Label 1<>>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 2<>"><v>Label 2<>>
+\<input type="radio" name="<v>fieldName1<>" value="<v>Value 3<>"><v>Label 3<> checked ><>
+@
+@ input, radio, "radio", type="radio", value=
+
+
+
+### Form - Input Radio Button - With Labels
+
+<cb>\<label>\<input type="radio" /><v>Label 1<>\<label><>
+
+Usage:
+
+<cb>\<label>
+	\<input type="radio" name="<v>name<>" id="<v>name-1<>" value="<v>item-1<>" />
+	<v>Label 1<>
+\</label>
+
+\<label>
+	\<input type="radio" name="<v>name<>" id="<v>name-2<>" value="<v>item-2<>" />
+	<v>Label 2<>
+\</label>
+
+\<label>
+	\<input type="radio" name="<v>name<>" id="<v>name-3<>" value="<v>item-3<>" />
+	<v>Label 3<>
+\</label><>
 
 
 
@@ -1296,9 +1574,32 @@ Pattern Filter:
 
 
 
+### Form - Input Text - Auto-complete
+
+<cb>\<input list="<v>list_1_name<>" ><>
+	
+<cb>\<datalist id="<v>list_1_name<>">
+	\<option value="<v>Value 1<>">
+	\<option value="<v>Value 2<>">
+	...
+\</datalist><>
+
+
+Allows an input text box to support auto-complete.
+@
+@ combo box, drop down, dropdown
+@ auto complete, autocomplete, auto-complete
+@ auto suggest, autosuggest, auto-suggest
+@ \<datalist>, \<option>
+
+
+
 ### Form - Input Text - Placeholder
 
 <cb>\<input type="text" name="<v>field1<>" placeholder="<v>placeholder text<>"><>
+@
+@ help, hints
+
 
 
 
@@ -1317,6 +1618,21 @@ Gives 'x' to clear fields on mobile devices, some browsers.
 Disable Word Wrap:
 
 <cb>\textarea wrap="soft" <v>...<>><>
+@
+@ text area, textarea, text box, textbox, multi-line, lines
+@ \<textarea>, \<textbox>
+
+
+
+### Form - Input Text Multiline - Placeholder Text
+
+<cb>\<textarea <v>...<> placeholder="<v>placeholder text here<>">\</textarea><>
+
+
+Shows placeholder text when the text area is empty.
+@
+@ text area, textarea, text box, textbox, multi-line, lines, place holder, help, hints
+@ \<textarea>, \<textbox>
 
 
 
@@ -1537,6 +1853,89 @@ Use With:
 
 
 
+# Select
+@
+@ option
+@ \<select>, \<option>
+
+
+## Select - Definition
+
+
+### Select - Drop-down
+
+<cb>\<select name="<v>items<>" id="<v>items<>">
+	\<option value="<v>item-1<>"><v>Item 1<>\</option>
+	\<option value="<v>item-2<>"><v>Item 2<>\</option>
+	\<option value="<v>item-3<>"><v>Item 3<>\</option>
+\</select><>
+@
+@ drop down, drop downs, drop-down, drop-downs, dropdown, dropdowns
+
+
+### Select - Multiselect List
+
+<cb>\<select <v>...<> multiple><>
+
+Usage:
+
+<cb>\<select name="<v>items<>" id="<v>items<>" mulitple>
+	\<option value="<v>item-1<>"><v>Item 1<>\</option>
+	\<option value="<v>item-2<>" selected><v>Item 2<>\</option>
+	\<option value="<v>item-3<>"><v>Item 3<>\</option>
+\</select><>
+
+
+Use selected to set the current value
+@
+@ multiple items, more than one
+@ multiple
+
+
+## Select - Properties
+@
+@ drop down, drop downs, drop-down, drop-downs, dropdown, dropdowns
+@ list
+
+
+### Select - Groups
+
+<cb>\<select name="<v>items<>" id="<v>items<>">
+	\<optgroup label="<v>Group 1<>">
+		\<option value="<v>item-1.1<>"><v>Item 1.1<>\</option>
+		\<option value="<v>item-1.2<>"><v>Item 1.2<>\</option>
+	\</optgroup>
+	\<optgroup label="<v>Group 2<>">
+		\<option value="<v>item-2.1<>"><v>Item 2.1<>\</option>
+		\<option value="<v>item-2.2<>"><v>Item 2.2<>\</option>
+	\</optgroup>
+\</select><>
+
+
+Group related items inside <c>\<optgroup><>.
+@
+@ groupings, option group
+@ \<optgroup>
+
+
+### Select - Select Default
+
+<cb>\<option <v>...<> selected><>
+
+Usage:
+
+<cb>\<select name="<v>items<>" id="<v>items<>">
+	\<option value="<v>item-1<>"><v>Item 1<>\</option>
+	\<option value="<v>item-2<>" selected><v>Item 2<>\</option>
+	\<option value="<v>item-3<>"><v>Item 3<>\</option>
+\</select><>
+
+
+Use selected to set the current value
+@
+@ selected, current value, item
+
+
 
 # Viewport
 
@@ -1560,6 +1959,31 @@ Use With:
 
 
 # How To
+
+
+
+### Custom Button - Define
+
+<cb>\<div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save\</div><>
+
+
+You can do this to create a custom button that you can customize... but you shouldn't.
+
+This will define an element as a button but provides no button functionality or styling.
+
+Prefer <c>\<button><> or <c>\<input type="button"><> instead.
+
+
+
+### Element - Make Focusable
+
+<cb>\<<v>element<> tabindex="0"><v>...<><>
+
+Add the attribute <c>tabindex<> to make a control focusable and accessible by tabbing.
+@
+@ tab stop, tabindex, tabbing, tabbable
+@ tabindex=""
+
 
 
 ### Embed Video
@@ -1651,10 +2075,64 @@ Example:
 <cb>\<meta http-equiv="refresh" content="3; url=index.html" ><>
 
 
-# Glossary
+
+# What's The Difference?
+@
+@ what is
 
 
-## Acronyms
+### \<datalist> vs \<select>
+
+\<datalist>:
+
+<*><>
+
+\<select>:
+
+<*><>
+
+
+
+### \<b> vs \<strong> vs \<i> vs \<em>
+
+<c>\<b><>:
+
+<*>Displays in <b>Bold<>
+Styling Only
+Does Not Indicate Importance
+Use for Keywords, Names<>
+
+
+<c>\<strong><>:
+
+<*>Displays in <b>Bold<>
+Indicates Importance
+Use for Stronger Emphasis Than <c>\<em><><>
+
+
+<c>\<i><>:
+
+<*>Displays in <i>Italic<>
+Styling Only
+Does Not Indicate Importance
+Use for keywords or names<>
+
+
+<c>\<em><>:
+
+<*>Displays in <i>Italic<>
+Indicates Importance
+Use For Change In Tone
+Use for Less Emphasis than <c>\<strong><><>
+@
+@ \<b>, \<em>, \<i>, \<strong>
+@ bold, emphasis, italic, strong
+
+
+
+# Acronyms
+@
+@ acronyms-only, acronym-only, glossary
 
 
 ### CDN
@@ -1717,7 +2195,10 @@ Unordered List
 World Wide Web Consortium
 
 
-## Terms
+
+# Terms
+@
+@ term-only, terms-only, glossary
 
 
 ### Block Element
